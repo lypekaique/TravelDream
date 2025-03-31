@@ -121,9 +121,13 @@ body {
 
 /* ===== SEÇÃO DA IMAGEM ===== */
 .image-section {
-  width: 50%;
   position: relative;
   overflow: hidden; /* Para transições suaves */
+  background-image: url("../IMG/Photo.webp");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 400px;
 }
 
 .section-image {
