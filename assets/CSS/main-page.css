@@ -925,9 +925,7 @@ p {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials-section h2 {
@@ -961,9 +959,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background: white;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   margin: 0 15px;
   transition: transform 0.3s ease;
 }
