@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulário de Cadastro para receber informações e promoções. Cadastre-se e faça parte da nossa comunidade!"
+    />
+    <meta
+      name="keywords"
+      content="cadastro, formulário, informações, promoções, comunidade"
+    />
+    <title>Formulário de Cadastro</title>
+    <link rel="preload" href="../IMG/Photo.webp" as="image" type="image/webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/CSS/Form.css" />
+    <link rel="stylesheet" href="./assets/CSS/main-page.css" />
+  </head>
+  <body>
+    <!-- Formulário de Cadastro -->
+    <div class="form-lead" id="formLead">
+      <div class="container">
+        <div class="form-container">
+          <form id="form">
+            <h2>Para Mais Informação</h2>
+            <div class="input-box">
+              <i class="fa-solid fa-user" style="color: #5bc0eb"></i>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Nome completo"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <i class="fa-solid fa-envelope" style="color: #5bc0eb"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Seu melhor e-mail"
+                required
+              />
+              <span id="email-error" class="error"></span>
+            </div>
+            <div class="input-box">
+              <i class="fa-solid fa-phone" style="color: #5bc0eb"></i>
+              <input
+                type="text"
+                id="telefone"
+                name="telefone"
+                placeholder="Telefone com DDD"
+                required
+              />
+            </div>
+            <div class="button-container">
+              <button id="enviar" type="submit">Enviar Cadastro</button>
+            </div>
+          </form>
+          <div class="loading-container" id="loading">
+            <img
+              src="assets/IMG/loading.webp"
+              alt="Processando"
+              class="loading-gif"
+            />
+            <div class="welcome-message" id="welcomeMessage"></div>
+          </div>
+        </div>
+        <div class="image-section">
+          <img
+            src="assets/IMG/Photo.webp"
+            alt="Comunidade"
+            class="section-image"
+            fetchpriority="high"
+            loading="eager"
+          />
+          <div class="overlay-background">
+            <div class="overlay-content">
+              <div class="text-container">
+                <h2>Bem-vindo</h2>
+                <p>Faça parte da nossa comunidade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-page" id="mainPage">
+      <header class="video-header">
+        <div class="header-content">
+          <div class="logo">
+            <img src="assets/IMG/Logo.webp" alt="Logo" />
+            <h2>
+              <span class="company-name"
+                >Travel<span style="color: #5bc0eb">Dream</span></span
+              >
+            </h2>
+            <button class="menu-toggle" aria-label="Abrir menu">
+              <span class="hamburger"></span>
+            </button>
+          </div>
+          <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contato</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="hero-section">
+          <div class="video-background">
+            <video id="background-video" autoplay loop muted playsinline>
+              <source src="assets/IMG/diversao.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="title-container">
+              <h1 id="video-title"></h1>
+              <p id="video-subtitle"></p>
+            </div>
+            <div class="thumbnail-carousel desktop-carousel">
+              <div class="thumbnail" onclick="updateContent(0)">
+                <img src="assets/IMG/Diversao-Thumb.webp" alt="Diversão" />
+                <p class="thumbnail-text">Diversão</p>
+              </div>
+              <div class="thumbnail" onclick="updateContent(1)">
+                <img src="assets/IMG/Cidade-Thumb.webp" alt="Cidade" />
+                <p class="thumbnail-text">Cidade</p>
+              </div>
+              <div class="thumbnail" onclick="updateContent(2)">
+                <img src="assets/IMG/Aventura-Thumb.webp" alt="Aventura" />
+                <p class="thumbnail-text">Aventura</p>
+              </div>
+              <div class="thumbnail" onclick="updateContent(3)">
+                <img src="assets/IMG/Nature-Thumb.webp" alt="Natureza" />
+                <p class="thumbnail-text">Natureza</p>
+              </div>
+            </div>
+            <div id="hero-swiper-mobile" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="updateContent(0)">
+                  <div class="thumbnail">
+                    <img src="assets/IMG/Diversao-Thumb.webp" alt="Diversão" />
+                    <p class="thumbnail-text">Diversão</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" onclick="updateContent(1)">
+                  <div class="thumbnail">
+                    <img src="assets/IMG/Cidade-Thumb.webp" alt="Cidade" />
+                    <p class="thumbnail-text">Cidade</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" onclick="updateContent(2)">
+                  <div class="thumbnail">
+                    <img src="assets/IMG/Aventura-Thumb.webp" alt="Aventura" />
+                    <p class="thumbnail-text">Aventura</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" onclick="updateContent(3)">
+                  <div class="thumbnail">
+                    <img src="assets/IMG/Nature-Thumb.webp" alt="Natureza" />
+                    <p class="thumbnail-text">Natureza</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-section">
+          <div class="about-container">
+            <div class="about-content">
+              <h2>
+                Sobre a
+                <span class="company-name"
+                  >Travel<span style="color: #5bc0eb">Dream</span></span
+                >
+              </h2>
+              <div class="about-text">
+                <p>
+                  Na TravelDream, transformamos sonhos em experiências
+                  inesquecíveis desde 2010. Somos apaixonados por conectar
+                  pessoas a destinos extraordinários, criando memórias que duram
+                  uma vida inteira.
+                </p>
+                <div class="mission-vision">
+                  <div class="mv-item">
+                    <img
+                      src="https://bpa.org/wp-content/uploads/2019/01/target-mission-vision-icon-RED-BLUE.svg"
+                      alt="Missão"
+                    />
+                    <h3>Nossa Missão</h3>
+                    <p>
+                      Oferecer experiências de viagem excepcionais, com serviço
+                      personalizado e atenção aos detalhes que fazem a
+                      diferença.
+                    </p>
+                  </div>
+                  <div class="mv-item">
+                    <img src="assets/IMG/vision.svg" alt="Visão" />
+                    <h3>Nossa Visão</h3>
+                    <p>
+                      Ser reconhecida como a empresa de viagens mais inovadora e
+                      confiável da América Latina até 2025.
+                    </p>
+                  </div>
+                </div>
+                <ul class="about-features">
+                  <li><span>✓</span> +15.000 clientes satisfeitos</li>
+                  <li><span>✓</span> Presentes em 30 países</li>
+                  <li>
+                    <span>✓</span> Prêmio Melhor Operadora de Turismo 2022
+                  </li>
+                  <li><span>✓</span> Pacotes personalizados sob medida</li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-image">
+              <img
+                src="assets/IMG/Equipe.webp"
+                alt="Equipe TravelDream"
+                class="main-image"
+              />
+              <div class="image-overlay">
+                <img
+                  src="assets/IMG/viajantes.webp"
+                  alt="Viajantes felizes"
+                  class="secondary-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="countries-gallery">
+          <h2>Explore As Belezas Desses Países</h2>
+          <div class="countries-grid">
+            <div class="country-card" data-country="brazil">
+              <img
+                src="assets/IMG/Flag_of_Brazil.webp"
+                alt="Brazil"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+            <div class="country-card" data-country="japan">
+              <img
+                src="https://s4.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-japao.jpg"
+                alt="Japan"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+            <div class="country-card" data-country="italy">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg"
+                alt="Italy"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+            <div class="country-card" data-country="suica">
+              <img
+                src="https://thumbs.dreamstime.com/b/bandeira-su%C3%AD%C3%A7a-6244464.jpg"
+                alt="Suica"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+            <div class="country-card" data-country="australia">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/800px-Flag_of_Australia.svg.png"
+                alt="Australia"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+            <div class="country-card" data-country="south-africa">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/640px-Flag_of_South_Africa.svg.png"
+                alt="South Africa"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="country-modal">
+          <span class="close-modal">&times;</span>
+          <span class="nav-arrow prev">&#10094;</span>
+          <span class="nav-arrow next">&#10095;</span>
+          <div class="modal-content">
+            <img id="modal-image" src="" alt="" />
+            <div class="image-counter"></div>
+          </div>
+          <div class="country-info">
+            <h3 id="modal-country-name"></h3>
+            <p id="image-caption"></p>
+          </div>
+        </div>
+        <section class="testimonials-section">
+          <h2 style="text-align: center; color: #e74c3c">Nossos Clientes</h2>
+          <div
+            id="testimonials-carousel"
+            class="splide"
+            aria-label="Depoimentos"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <!-- Slide 1 -->
+                <li class="splide__slide">
+                  <div class="testimonial">
+                    <div class="testimonial-photo">
+                      <div class="photo-bg"></div>
+                      <img
+                        src="assets/IMG/User.webp"
+                        alt="Nome 2"
+                        alt="Nome 1"
+                      />
+                    </div>
+                    <div class="testimonial-text">
+                      “Excelente serviço, recomendo para todos!”
+                    </div>
+                    <div class="testimonial-rating">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                  </div>
+                </li>
+                <!-- Slide 2 -->
+                <li class="splide__slide">
+                  <div class="testimonial">
+                    <div class="testimonial-photo">
+                      <div class="photo-bg"></div>
+                      <img src="assets/IMG/User.webp" alt="Nome 2" />
+                    </div>
+                    <div class="testimonial-text">
+                      “Fiquei impressionado com a qualidade e atenção aos
+                      detalhes.”
+                    </div>
+                    <div class="testimonial-rating">
+                      &#9733; &#9733; &#9733; &#9733; &#9734;
+                    </div>
+                  </div>
+                </li>
+                <!-- Slide 3 -->
+                <li class="splide__slide">
+                  <div class="testimonial">
+                    <div class="testimonial-photo">
+                      <div class="photo-bg"></div>
+                      <img
+                        src="assets/IMG/User.webp"
+                        alt="Nome 2"
+                        alt="Nome 3"
+                      />
+                    </div>
+                    <div class="testimonial-text">
+                      “Profissionalismo e rapidez! Volto a contratar sem pensar
+                      duas vezes.”
+                    </div>
+                    <div class="testimonial-rating">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="promo-section">
+          <a href="#sua-url-de-destino-aqui">
+            <div class="countdown-container">
+              <div class="promo-text">Compre</div>
+              <div class="countdown" id="countdown">00:12:00:00</div>
+            </div>
+          </a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3 class="footer-title">Sobre Nós</h3>
+            <p class="footer-text">
+              Transformando sonhos em experiências inesquecíveis através de
+              viagens memoráveis.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Home</a></li>
+              <li><a href="#" class="footer-link">Pacotes</a></li>
+              <li><a href="#" class="footer-link">Promoções</a></li>
+              <li><a href="#" class="footer-link">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contato</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Av. das Viagens, 123
+              </li>
+              <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+              <li><i class="fas fa-envelope"></i> contato@traveldream.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2024 TravelDream. Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="assets/JS/count.js"></script>
+    <script src="assets/JS/test.js"></script>
+    <script src="assets/JS/main.js"></script>
+    <script src="assets/JS/form.js"></script>
+    <script src="assets/JS/grid.js"></script>
+    <script src="assets/JS/animation.js"></script>
+    <script src="assets/JS/header.js"></script>
+  </body>
+</html>
