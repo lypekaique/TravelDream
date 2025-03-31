@@ -320,3 +320,23 @@ body {
     animation: mobileCrush 0.5s ease-in-out forwards;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .section-image {
+    /* Ajuste o tamanho máximo ou altura da imagem para dispositivos móveis */
+    max-height: 400px;
+    /* Se necessário, você pode definir outros ajustes para evitar imagens muito grandes */
+  }
+
+  .overlay-background {
+    /* Reduza um pouco a opacidade para melhor visualização em telas menores */
+    background: rgba(33, 196, 233, 0.5);
+  }
+
+  .text-container {
+    /* Ajuste o tamanho da fonte para melhor legibilidade em dispositivos móveis */
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
