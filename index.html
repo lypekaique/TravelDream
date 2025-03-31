@@ -22,18 +22,37 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /></noscript>
     <link rel="stylesheet" href="./assets/CSS/Form.css" />
     <link rel="stylesheet" href="./assets/CSS/main-page.css" />
   </head>
+  <style>
+    /* Coloque aqui os estilos essenciais para renderização inicial */
+    .image-section, .form-container { 
+      opacity: 0; 
+      transition: opacity 0.3s;
+    }
+    .loaded .image-section, .loaded .form-container { 
+      opacity: 1; 
+    }
+  </style>
   <body>
     <!-- Formulário de Cadastro -->
     <div class="form-lead" id="formLead">
@@ -448,7 +467,7 @@
       </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="assets/JS/count.js"></script>
     <script src="assets/JS/test.js"></script>
