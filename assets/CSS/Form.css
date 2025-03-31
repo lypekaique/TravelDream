@@ -340,3 +340,13 @@ body {
     padding: 0 10px;
   }
 }
+
+
+.image-section {
+  contain: layout paint style;  
+}
+
+.section-image {
+  object-fit: cover; 
+  aspect-ratio: 3/2; 
+}

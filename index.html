@@ -15,9 +15,9 @@
     <link
       rel="preload"
       as="image"
-      href="assets/IMG/Photo.webp"
-      imagesrcset="assets/IMG/Photo.webp"
-      imagesizes="100vw"
+      href="assets/IMG/Photo-mobile.webp"
+      imagesrcset="assets/IMG/Photo-mobile.webp 1x, assets/IMG/Photo.webp 2x"
+      media="(max-width: 768px)"
     />
     <link
       rel="stylesheet"
@@ -87,7 +87,8 @@
         </div>
         <div class="image-section">
           <img
-            src="assets/IMG/Photo.webp"
+            src="assets/IMG/Photo-mobile.webp"
+            sizes="(max-width: 768px) 150px, 300px"
             class="section-image"
             fetchpriority="high"
             loading="eager"
@@ -455,13 +456,19 @@
       </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="assets/JS/count.js"></script>
-    <script src="assets/JS/test.js"></script>
-    <script src="assets/JS/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+      defer
+    ></script>
+    <script src="assets/JS/count.js" defer></script>
+    <script src="assets/JS/test.js" defer></script>
+    <script src="assets/JS/main.js" defer></script>
     <script src="assets/JS/form.js"></script>
-    <script src="assets/JS/grid.js"></script>
+    <script src="assets/JS/grid.js" defer></script>
     <script src="assets/JS/animation.js"></script>
     <script src="assets/JS/header.js"></script>
   </body>
