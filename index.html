@@ -12,13 +12,27 @@
       content="cadastro, formulário, informações, promoções, comunidade"
     />
     <title>Travel Dream</title>
+
+    <!-- Preload de fontes e imagens -->
     <link
       rel="preload"
-      as="image"
       href="assets/IMG/Photo.webp"
+      as="image"
       imagesrcset="assets/IMG/Photo.webp"
       imagesizes="100vw"
     />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+    />
+
+    <!-- Estilos -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
@@ -448,14 +462,22 @@
       </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="assets/JS/count.js"></script>
-    <script src="assets/JS/test.js"></script>
-    <script src="assets/JS/main.js"></script>
-    <script src="assets/JS/form.js"></script>
-    <script src="assets/JS/grid.js"></script>
-    <script src="assets/JS/animation.js"></script>
-    <script src="assets/JS/header.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+    ></script>
+
+    <!-- Scripts do projeto (também com "defer") -->
+    <script defer src="assets/JS/count.js"></script>
+    <script defer src="assets/JS/test.js"></script>
+    <script defer src="assets/JS/main.js"></script>
+    <script defer src="assets/JS/form.js"></script>
+    <script defer src="assets/JS/grid.js"></script>
+    <script defer src="assets/JS/animation.js"></script>
+    <script defer src="assets/JS/header.js"></script>
   </body>
 </html>
