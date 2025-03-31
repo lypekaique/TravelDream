@@ -123,7 +123,7 @@ body {
 .image-section {
   position: relative;
   overflow: hidden; /* Para transições suaves */
-  /* background-image: url("../IMG/Photo.webp"); */
+  background-image: url("../IMG/Photo.webp");
   background-size: cover;
   background-position: center;
   width: 50%;
@@ -345,12 +345,11 @@ body {
   }
 }
 
-
 .image-section {
-  contain: layout paint style;  
+  contain: layout paint style;
 }
 
 .section-image {
-  object-fit: cover; 
-  aspect-ratio: 3/2; 
+  object-fit: cover;
+  aspect-ratio: 3/2;
 }
