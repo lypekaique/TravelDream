@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -71,11 +72,14 @@
             </div>
           </form>
           <div class="loading-container" id="loading">
-            <img
-              src="assets/IMG/loading.webp"
-              alt="Processando"
-              class="loading-gif"
-            />
+            <dotlottie-player
+              src="https://lottie.host/2a19444b-e147-4486-ad7b-4f47af829e89/8sbZe5dvbw.lottie"
+              background="transparent"
+              speed="1"
+              style="width: 80px; height: 80px"
+              loop
+              autoplay
+            ></dotlottie-player>
             <div class="welcome-message" id="welcomeMessage"></div>
           </div>
         </div>
@@ -457,5 +461,9 @@
     <script src="assets/JS/grid.js"></script>
     <script src="assets/JS/animation.js"></script>
     <script src="assets/JS/header.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </body>
 </html>
